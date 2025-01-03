@@ -2,7 +2,6 @@
 "use client";
 
 import { ReactNode } from "react";
-import HomePage from "./page";
 import CustomNavbar from "./_components/ui/navbar";
 import Footer from "./_components/footer";
 import SmoothScrollWrapper from "./_components/ui/ScrollAnimation";
@@ -38,7 +37,11 @@ export default function CommonLayout({
             <Element name="home">
                 <div>{children}</div>
             </Element>
-            
+            {/* Skills section with animation */}
+            <Element name="skills">
+                <div>{skills}</div>
+            </Element>
+
             <Footer />
         </div>
     );
