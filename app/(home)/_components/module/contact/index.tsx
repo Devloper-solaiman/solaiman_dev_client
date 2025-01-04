@@ -12,7 +12,6 @@ import ContactLeft from "./contactLeft";
 
 interface FormValues {
   username: string;
-  phoneNumber: string;
   email: string;
   subject: string;
   message: string;
@@ -21,7 +20,6 @@ interface FormValues {
 const Contact: React.FC = () => {
   const [formValues, setFormValues] = useState<FormValues>({
     username: "",
-    phoneNumber: "",
     email: "",
     subject: "",
     message: "",
@@ -48,7 +46,7 @@ const Contact: React.FC = () => {
   const handleSend = (e: FormEvent) => {
     e.preventDefault();
     const { username, email, message } = formValues;
-
+console.log("good dk",formValues)
     if (!username) {
       setErrMsg("Name is required!");
     } else if (!email) {
@@ -59,14 +57,13 @@ const Contact: React.FC = () => {
       setErrMsg("Message is required!");
     } else {
       setErrMsg(null);
-
       // Use emailjs to send the form data
       emailjs
         .sendForm(
-          "service_ip29zlj",
-          "template_temtbnb",
+          "service_yhyw0i7",
+          "template_fbns2kf",
           form.current as HTMLFormElement,
-          "ny6YrdIih4hcgCksv",
+          "a5kJNbBsO0YAgckt-",
         )
         .then(
           (result) => {
@@ -75,7 +72,6 @@ const Contact: React.FC = () => {
             );
             setFormValues({
               username: "",
-              phoneNumber: "",
               email: "",
               subject: "",
               message: "",

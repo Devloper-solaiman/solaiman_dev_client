@@ -5,9 +5,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Copy, Check } from "lucide-react";
-
+import expriesceImg from "../../../../../assets/experience.json";
 import NavButtons from "../../ui/navButtons";
 import Link from "next/link";
+import Lottie from "lottie-react";
 
 const ContactLeft: React.FC = () => {
   const [copied, setCopied] = useState<{ whatsapp: boolean; email: boolean }>({
@@ -72,15 +73,11 @@ const ContactLeft: React.FC = () => {
 
       {/* Animated Image */}
       <div className="flex items-center justify-center">
-        <Image
-          alt="animation"
-          className="w-full h-[268px] object-cover rounded-lg"
-          height={500}
-          src={
-            "https://raw.githubusercontent.com/devSouvik/devSouvik/master/gif3.gif"
-          }
-          width={500}
-        />
+      <Lottie
+                    animationData={expriesceImg}
+                    className="md:h-[270px] md:w-full"
+                    loop={true}
+                />
       </div>
     </div>
   );
