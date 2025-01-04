@@ -60,7 +60,7 @@
 		"slate-react": "^0.112.0",
 		"sonner": "^1.7.1",
 		"swiper": "^11.2.0",
-		"vercel": "^39.2.5"
+		"vercel": "^28.18.5"
 	},
 	"devDependencies": {
 		"@emailjs/browser": "^4.4.1",
