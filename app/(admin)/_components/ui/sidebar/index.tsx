@@ -6,7 +6,7 @@ import React, { ReactNode, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-import Logo from "../logo";
+import Logo from "../../../../(home)/_components/ui/logo";
 
 import { siteConfig } from "@/config/site";
 export default function SidebarMain({ children }: { children: ReactNode }) {

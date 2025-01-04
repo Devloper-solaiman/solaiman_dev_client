@@ -1,9 +1,7 @@
 export enum SkillCategory {
   Frontend = "Frontend",
   Backend = "Backend",
-  DevOps = "DevOps",
   Database = "Database",
-  Android = "Android",
   Tools = "Tools",
   Other = "Other",
 }

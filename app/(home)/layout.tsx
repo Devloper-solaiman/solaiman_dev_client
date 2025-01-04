@@ -41,7 +41,22 @@ export default function CommonLayout({
             <Element name="skills">
                 <div>{skills}</div>
             </Element>
-
+            {/* Experience section with animation */}
+            <Element name="experience">
+                <div>{experience}</div>
+            </Element>
+            <Element name="about">
+                <div>{aboutMe}</div>
+            </Element>
+            <Element name="projects">
+                <div>{projects}</div>
+            </Element>
+            <Element name="blogs">
+                <div>{myBlogs}</div>
+            </Element>
+            <Element name="contact">
+                <div>{contactMe}</div>
+            </Element>
             <Footer />
         </div>
     );
