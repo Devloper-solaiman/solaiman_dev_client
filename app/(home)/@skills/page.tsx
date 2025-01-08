@@ -8,7 +8,7 @@ const SkillsPage = () => {
   return (
     <div>
       <Title title1="Skills" title2="Skills" />
-      <SkillCategories/>
+      <SkillCategories />
     </div>
   );
 };

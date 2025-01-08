@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-"use server"
+"use server";
 import { revalidateTag } from "next/cache";
 import { FieldValues } from "react-hook-form";
 
@@ -22,64 +22,63 @@ export const createSkill = async (skillData: FieldValues) => {
 
 // Fetch all skills
 export const getAllSkills = async () => {
-    let fetchOptions = {};
-  
-    fetchOptions = {
-      cache: "no-store",
-      next: {
-        tags: ["skills"],
-      },
-    };
-  
-    const { data } = await axiosInstance.get("/skills", { fetchOptions });
-  
-    return data;
+  let fetchOptions = {};
+
+  fetchOptions = {
+    cache: "no-store",
+    next: {
+      tags: ["skills"],
+    },
   };
-  // Fetch skills based on the category
+
+  const { data } = await axiosInstance.get("/skills", { fetchOptions });
+
+  return data;
+};
+// Fetch skills based on the category
 export const getSkillsByCategory = async (category?: SkillCategory) => {
-    let fetchOptions = {};
-  
-    fetchOptions = {
-      cache: "no-store",
-      next: {
-        tags: ["skills"],
-      },
-    };
-  
-    const { data } = await axiosInstance.get("/skills", {
-      params: { category },
-      fetchOptions,
-    });
-  
+  let fetchOptions = {};
+
+  fetchOptions = {
+    cache: "no-store",
+    next: {
+      tags: ["skills"],
+    },
+  };
+
+  const { data } = await axiosInstance.get("/skills", {
+    params: { category },
+    fetchOptions,
+  });
+
+  return data;
+};
+
+// Update skill
+export const editSkill = async (skillData: TUpdateData) => {
+  try {
+    const { data } = await axiosInstance.patch(
+      `/skills/${skillData?.id}`,
+      skillData?.data,
+    );
+
+    revalidateTag("skills");
+
     return data;
-  };
-  
-  // Update skill
-  export const editSkill = async (skillData: TUpdateData) => {
-    try {
-      const { data } = await axiosInstance.patch(
-        `/skills/${skillData?.id}`,
-        skillData?.data,
-      );
-  
-      revalidateTag("skills");
-  
-      return data;
-    } catch (error: any) {
-      throw new Error(error);
-    }
-  };
-  
-  // Delete skill
-  export const deleteSkill = async (id: string) => {
-    try {
-      const { data } = await axiosInstance.delete(`/skills/${id}`);
-  
-      revalidateTag("skills");
-  
-      return data;
-    } catch (error: any) {
-      throw new Error(error);
-    }
-  };
-  
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};
+
+// Delete skill
+export const deleteSkill = async (id: string) => {
+  try {
+    const { data } = await axiosInstance.delete(`/skills/${id}`);
+
+    revalidateTag("skills");
+
+    return data;
+  } catch (error: any) {
+    throw new Error(error);
+  }
+};

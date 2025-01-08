@@ -23,17 +23,17 @@ const cardContainerVariants = {
   },
 };
 
-const techBadgeVariants = {
-  hidden: { scale: 0.8, opacity: 0 },
-  visible: (index: number) => ({
-    scale: 1,
-    opacity: 1,
-    transition: {
-      delay: index * 0.1, // Stagger each badge animation
-      duration: 0.3,
-    },
-  }),
-};
+// const techBadgeVariants = {
+//   hidden: { scale: 0.8, opacity: 0 },
+//   visible: (index: number) => ({
+//     scale: 1,
+//     opacity: 1,
+//     transition: {
+//       delay: index * 0.1, // Stagger each badge animation
+//       duration: 0.3,
+//     },
+//   }),
+// };
 
 const buttonContainerVariants = {
   hidden: { opacity: 0 },

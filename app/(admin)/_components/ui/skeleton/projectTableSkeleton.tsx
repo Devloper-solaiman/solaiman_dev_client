@@ -1,7 +1,14 @@
 /* eslint-disable prettier/prettier */
 "use client";
 
-import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from "@nextui-org/table";
 import { Skeleton } from "@nextui-org/skeleton";
 
 import AddProjectModal from "../../modal/addProjectModal";

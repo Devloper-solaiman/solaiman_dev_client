@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const logoVariants = {
   initial: { opacity: 0, y: -20 },
@@ -24,15 +24,15 @@ const letterVariants = {
 };
 
 export default function Logo() {
-  const letters = 'S'.split('');
+  const letters = "S".split("");
 
   return (
     <Link href="/">
       <motion.div
-        className="flex items-center cursor-pointer"
-        variants={logoVariants}
-        initial="initial"
         animate="animate"
+        className="flex items-center cursor-pointer"
+        initial="initial"
+        variants={logoVariants}
         whileHover="whileHover"
       >
         <div className="flex items-center bg-gradient-to-r from-[#00FFFF] dark:to-default-50 to-[#00FF52] px-2 rounded-full">
@@ -46,7 +46,7 @@ export default function Logo() {
               <p
                 className="text-white  font-bold lg md:text-2xl m-0"
                 style={{
-                  textShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                  textShadow: "0 2px 4px rgba(0,0,0,0.1)",
                 }}
               >
                 {letter}

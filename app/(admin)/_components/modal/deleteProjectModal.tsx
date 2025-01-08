@@ -1,7 +1,14 @@
 /* eslint-disable prettier/prettier */
 
 import { Button } from "@nextui-org/button";
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/modal";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/modal";
 import { FaTrashAlt } from "react-icons/fa";
 
 import { TProject } from "@/types";
@@ -20,8 +27,6 @@ export default function DeleteProjectModal({
 
   const deleteProjectHandler = async (id: string) => {
     if (!id) {
-      console.error("Id is required but not provided.");
-
       return;
     }
 

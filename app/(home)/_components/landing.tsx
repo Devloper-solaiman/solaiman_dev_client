@@ -77,7 +77,7 @@ const Landing = () => {
                 <Cursor cursorColor="#F5A524" />
               </h2>
               <p className="text-default-700 mt-6 leading-relaxed">
-              As a Font End developer, I combine technical expertise with a
+                As a Font End developer, I combine technical expertise with a
                 passion for creating intuitive and impactful web applications. I
                 strive to build seamless digital experiences that bridge
                 creativity and innovation.

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
 "use client";
 
@@ -46,7 +47,7 @@ const Contact: React.FC = () => {
   const handleSend = (e: FormEvent) => {
     e.preventDefault();
     const { username, email, message } = formValues;
-console.log("good dk",formValues)
+
     if (!username) {
       setErrMsg("Name is required!");
     } else if (!email) {
@@ -66,7 +67,7 @@ console.log("good dk",formValues)
           "a5kJNbBsO0YAgckt-",
         )
         .then(
-          (result) => {
+          () => {
             setSuccessMsg(
               `Thank you, ${username}! Your message has been sent successfully.`,
             );
@@ -77,7 +78,8 @@ console.log("good dk",formValues)
               message: "",
             });
           },
-          (error) => {
+          (err) => {
+            console.error(err);
             setErrMsg("Something went wrong. Please try again.");
           },
         );

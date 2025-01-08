@@ -84,6 +84,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/profile.php?id=100034976902391",
     twitter: "https://x.com/solaimandevlop1",
     discord: "https://discord.gg/49AxDPnM",
-    resume: "https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link",
+    resume:
+      "https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link",
   },
 };

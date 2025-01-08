@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-"use client"
+"use client";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { useRouter, useSearchParams } from "next/navigation";

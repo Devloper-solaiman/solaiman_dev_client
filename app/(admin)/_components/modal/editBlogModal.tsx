@@ -54,6 +54,7 @@ export default function EditBlogModal({ blog }: { blog: TBlog }) {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     if (!data.imageUrl) {
       alert("Image is required but not uploaded.");
+
       return;
     }
 

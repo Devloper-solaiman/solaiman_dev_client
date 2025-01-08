@@ -6,7 +6,7 @@ import Landing from "./_components/landing";
 const HomePage = () => {
   return (
     <div>
-      <Landing/>
+      <Landing />
     </div>
   );
 };

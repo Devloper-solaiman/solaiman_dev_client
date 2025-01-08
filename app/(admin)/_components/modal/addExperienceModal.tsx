@@ -28,7 +28,7 @@ export default function AddExperienceModal() {
   const {
     register,
     handleSubmit,
-    setValue,
+
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -49,7 +49,7 @@ export default function AddExperienceModal() {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     data.technologies = Array.from(selectedTechnologies) as string[];
-    console.log(data);
+
     addExperienceFn(data);
   };
 

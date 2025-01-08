@@ -1,7 +1,14 @@
 /* eslint-disable prettier/prettier */
 
-import React,{ useState } from "react";
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/modal";
+import React, { useState } from "react";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/modal";
 import { Button } from "@nextui-org/button";
 import { FaImage, FaPlus } from "react-icons/fa";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
@@ -23,7 +30,13 @@ export default function AddProjectModal() {
   const { data } = useGetAllSkills();
   const skills = data?.data;
 
-  const { register, handleSubmit,setValue, watch, formState: { errors },} = useForm({
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       title: "",
       description: "",

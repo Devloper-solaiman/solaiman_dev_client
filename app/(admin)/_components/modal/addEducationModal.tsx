@@ -52,7 +52,6 @@ export default function AddEducationModal() {
         .map((subject: string) => subject.trim()), // Split subjects by comma
     };
 
-    console.log(addData);
     addEducationFn(addData);
     onOpenChange(); // Close the modal after submission
   };

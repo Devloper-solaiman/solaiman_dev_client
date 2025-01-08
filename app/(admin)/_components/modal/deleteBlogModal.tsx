@@ -24,8 +24,6 @@ export default function DeleteBlogModal({ blog }: TDeleteBlogModalProps) {
 
   const deleteBlogHandler = async (id: string) => {
     if (!id) {
-      console.error("Id is required but not provided.");
-
       return;
     }
 

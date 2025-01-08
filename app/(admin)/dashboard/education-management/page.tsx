@@ -9,7 +9,6 @@ import { getAllEducations } from "@/service/educationService/educationService";
 export default async function EducationManagement() {
   const data = await getAllEducations();
 
-  console.log(data);
   const educations = data?.data;
 
   return (

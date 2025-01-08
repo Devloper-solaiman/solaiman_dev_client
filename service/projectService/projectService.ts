@@ -7,8 +7,6 @@ import { FieldValues } from "react-hook-form";
 import axiosInstance from "@/lib/axiosInstance";
 import { TUpdateData } from "@/types";
 
-
-
 // Create project
 export const createProject = async (projectData: FieldValues) => {
   try {

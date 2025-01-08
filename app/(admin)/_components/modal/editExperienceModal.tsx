@@ -34,7 +34,6 @@ export default function EditExperienceModal({
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm({
     defaultValues: experience,
@@ -47,7 +46,6 @@ export default function EditExperienceModal({
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     data.technologies = Array.from(selectedTechnologies) as string[];
-    console.log(data);
 
     const experienceData = {
       id: experience._id,

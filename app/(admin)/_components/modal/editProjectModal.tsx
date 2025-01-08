@@ -1,6 +1,13 @@
 /* eslint-disable prettier/prettier */
 
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@nextui-org/modal";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  useDisclosure,
+} from "@nextui-org/modal";
 import { useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { Selection } from "@nextui-org/table";
@@ -27,7 +34,13 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
   const { data } = useGetAllSkills();
   const skills = data?.data;
 
-  const {register,handleSubmit,setValue,watch,formState: { errors },} = useForm({
+  const {
+    register,
+    handleSubmit,
+    setValue,
+    watch,
+    formState: { errors },
+  } = useForm({
     defaultValues: project,
   });
 
@@ -73,8 +86,6 @@ export default function EditProjectModal({ project }: TEditProjectModalProps) {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     if (data.images.length === 0) {
-      console.error("At least one image is required.");
-
       return;
     }
     // Convert selected technologies Set to an array

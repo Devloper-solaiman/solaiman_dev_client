@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Avatar } from '@nextui-org/avatar';
+import React from "react";
+import { Avatar } from "@nextui-org/avatar";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
-import { Title } from '../../ui/title';
-import { motion } from 'framer-motion';
+import { Title } from "../../ui/title";
 
-import { TBlog } from '@/types';
-import Image from 'next/image';
-import Link from 'next/link';
+import { TBlog } from "@/types";
 
 interface TBlogsProps {
   blogs: TBlog[];
@@ -22,7 +22,7 @@ const cardContainerVariants = {
     transition: {
       delay: 0.2,
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 };
@@ -47,12 +47,12 @@ interface BlogCardProps {
 const BlogCard = ({ blog }: BlogCardProps) => {
   return (
     <motion.div
-      variants={cardContainerVariants}
-      initial="hidden"
       animate="visible"
-      whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)' }}
-      transition={{ duration: 0.3 }}
       className="border border-default-200 rounded-lg p-6 relative h-auto md:h-[350px]"
+      initial="hidden"
+      transition={{ duration: 0.3 }}
+      variants={cardContainerVariants}
+      whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }}
     >
       <div className="flex gap-3 items-center">
         <Avatar size="md" src={blog.author.image} />
@@ -64,16 +64,16 @@ const BlogCard = ({ blog }: BlogCardProps) => {
         </div>
       </div>
       <Image
-        width={500}
-        height={500}
         alt="Blog image"
         className="w-full md:w-[250px] h-auto my-2 rounded-lg"
+        height={500}
         src={blog.imageUrl}
+        width={500}
       />
       <div className="mt-5">
         <Link
-          href={`/blogs/${blog?._id}`}
           className="mt-4 font-semibold text-warning border-b border-warning hover:text-warning-600"
+          href={`/blogs/${blog?._id}`}
         >
           Read more
         </Link>

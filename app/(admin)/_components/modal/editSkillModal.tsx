@@ -56,8 +56,6 @@ export default function EditSkillModal({ skill }: TEditSkillModalProps) {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     if (!data.icon) {
-      console.error("Icon is required but not uploaded.");
-
       return;
     }
     const skillData: TUpdateData = {

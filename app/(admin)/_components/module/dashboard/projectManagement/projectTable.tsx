@@ -1,7 +1,14 @@
 /* eslint-disable prettier/prettier */
 "use client";
 
-import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from "@nextui-org/table";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from "@nextui-org/table";
 import { Avatar } from "@nextui-org/avatar";
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/tooltip";
@@ -12,7 +19,6 @@ import DeleteProjectModal from "../../../modal/deleteProjectModal";
 import AddProjectModal from "../../../modal/addProjectModal";
 
 import { TProject } from "@/types";
-
 
 interface TProjectTableProps {
   projects: TProject[];

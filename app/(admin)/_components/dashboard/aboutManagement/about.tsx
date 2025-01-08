@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
 "use client";
 
@@ -65,7 +66,7 @@ export default function About({ about }: TProfileProps) {
     if (file) {
       setIsImageUploading(true);
       const uploadedUrl = await uploadImageToCloudinary(file);
-console.log("dd",uploadedUrl)
+
       setEditableAdminData((prevData) => ({ ...prevData, image: uploadedUrl }));
       setIsImageUploading(false);
     }
@@ -88,14 +89,10 @@ console.log("dd",uploadedUrl)
         name: editableAdminData.name,
         image: editableAdminData.image,
       };
-console.log(editAboutData, editAdminData)
+
       editAboutFn(editAboutData);
       editAdminFn(editAdminData);
 
-      console.log("Data successfully saved:", {
-        about: editableData,
-        admin: editableAdminData,
-      });
       setIsEditing(false);
     } catch (error) {
       console.error("Error saving data:", error);

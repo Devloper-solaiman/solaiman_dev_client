@@ -10,7 +10,7 @@ import Logo from "../../../../(home)/_components/ui/logo";
 
 import { siteConfig } from "@/config/site";
 export default function SidebarMain({ children }: { children: ReactNode }) {
-    const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   const pathname = usePathname();
 
   // Monitor screen size
@@ -80,9 +80,7 @@ export default function SidebarMain({ children }: { children: ReactNode }) {
         variants={sidebarVariants}
       >
         {/* Sidebar Logo */}
-        <motion.span
-          className="flex items-start text-lg font-semibold p-4 cursor-pointer" 
-        >
+        <motion.span className="flex items-start text-lg font-semibold p-4 cursor-pointer">
           <Logo />
         </motion.span>
 

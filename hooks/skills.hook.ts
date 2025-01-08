@@ -4,7 +4,12 @@ import { FieldValues } from "react-hook-form";
 import { toast } from "sonner";
 
 import { TUpdateData } from "@/types";
-import { createSkill, deleteSkill, editSkill, getSkillsByCategory } from "@/service/skillsService/skillsService";
+import {
+  createSkill,
+  deleteSkill,
+  editSkill,
+  getSkillsByCategory,
+} from "@/service/skillsService/skillsService";
 
 // Create skills
 export const useCreateSkill = () => {

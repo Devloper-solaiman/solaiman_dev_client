@@ -17,7 +17,7 @@ import { TProject } from "@/types";
 
 export default function ProjectDetails({ project }: { project: TProject }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { images, title, description, technologies, live, github } = project;
+  const { images, title, description, technologies, github } = project;
 
   const handleImageChange = (index: number) => {
     setCurrentImageIndex(index);
