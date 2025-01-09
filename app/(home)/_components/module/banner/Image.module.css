@@ -3,7 +3,7 @@
   position: relative;
   width: 300px;
   height: 300px;
-  background-color: #f6e7d8;
+  background-color: #f6f3d8b0;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   content: "";
   position: absolute;
   inset: -10px 100px;
-  background: linear-gradient(#a16e00, #aa883f);
+  background: linear-gradient(#f6f3d800, #f6f3d82f);
   transition: 0.5s;
   animation: animate 4s linear infinite;
 }
@@ -20,15 +20,15 @@
 .box::after {
   content: "";
   position: absolute;
-  background-color: #f5a524;
-  inset: 10px;
+  background-color: #8a5604;
+  inset: 5px;
   border-radius: 50%;
   z-index: 1;
 }
 
 .content {
   position: absolute;
-  inset: 30px;
+  inset: 8px;
   border: 6px solid #f6e7d8;
   z-index: 3;
   border-radius: 50%;
@@ -72,7 +72,7 @@
 .content a {
   position: relative;
   background-color: #fff;
-  color: #f5a524;
+  color: #251801;
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 14px;

@@ -11,18 +11,18 @@ import AnimatedButton from "./ui/button";
 import ImageBox from "./module/banner/imageBox";
 
 const Landing = () => {
-  const [text] = useTypewriter({
-    words: [
-      "Full-Stack Developer.",
-      "Frontend Developer.",
-      "MERN Stack Developer.",
-      "Problem Solver.",
-    ],
-    loop: true,
-    typeSpeed: 50,
-    deleteSpeed: 20,
-    delaySpeed: 2000,
-  });
+  // const [text] = useTypewriter({
+  //   words: [
+  //     "Full-Stack Developer.",
+  //     "Frontend Developer.",
+  //     "MERN Stack Developer.",
+  //     "Problem Solver.",
+  //   ],
+  //   loop: true,
+  //   typeSpeed: 50,
+  //   deleteSpeed: 20,
+  //   delaySpeed: 2000,
+  // });
 
   useEffect(() => {
     // jQuery for advanced image animations
@@ -69,12 +69,12 @@ const Landing = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-default-800">
                 Hello, I&apos;m{" "}
-                <span className="text-[#F5A524]">MD Solaiman</span>
+                <span className="text-[#b1791f]">MD Solaiman</span>
               </h1>
 
               <h2 className="text-xl md:text-3xl text-default-700 mt-4">
-                A {text}
-                <Cursor cursorColor="#F5A524" />
+                A Frontend Developer.
+                
               </h2>
               <p className="text-default-700 mt-6 leading-relaxed">
                 As a Font End developer, I combine technical expertise with a
@@ -85,21 +85,21 @@ const Landing = () => {
 
               <div className="mt-6 flex flex-wrap gap-4 justify-center lg:justify-start">
                 <AnimatedButton
-                  bgColor="bg-warning hover:bg-warning-500"
+                  bgColor="bg-[#8a5604] hover:bg-warning-300"
                   href="https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link"
                   target="_blank"
                   text="View Resume"
-                  textColor="text-gray-800"
+                  textColor="text-gray-100 hover:text-gray-700"
                 />
 
                 <AnimatedButton
                   IconComponent={AiOutlineFundProjectionScreen}
                   bgColor="bg-transparent"
-                  borderColor="border-warning-500"
+                  borderColor="border-warning-300"
                   href="#projects"
                   target="_self"
                   text="Explore Projects"
-                  textColor="text-[#F5A524]"
+                  textColor="text-[#FFBF00]"
                 />
               </div>
             </div>

@@ -6,10 +6,12 @@ import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaCopy, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
-// import Lottie from "lottie-react";
-
-// import expriesceImg from "../../../../../assets/experience.json";
+import dynamic from "next/dynamic";
+import animationData from "./experience.json";
 import NavButtons from "../../ui/navButtons";
+
+// Dynamic import to avoid SSR issues
+const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const ContactLeft: React.FC = () => {
   const [copied, setCopied] = useState<{ whatsapp: boolean; email: boolean }>({
@@ -84,15 +86,12 @@ const ContactLeft: React.FC = () => {
 
       {/* Animated Image */}
       <div className="flex items-center justify-center">
-        <Image
-          alt="gmail"
-          className="size-5"
-          height={20}
-          src={
-            "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-          }
-          width={20}
-        />
+        <Player
+          play
+          loop
+          animationData={animationData}
+          style={{ width: 240, height: 272 }}
+        /> 
       </div>
     </div>
   );

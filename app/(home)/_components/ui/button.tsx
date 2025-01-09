@@ -23,7 +23,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
   href,
   text,
   IconComponent = IoDownload,
-  bgColor = "bg-white",
+  bgColor = "bg-[#FFBF00]",
   textColor = "text-black",
   borderColor = "border-default-200",
   shadowColor = "shadow-md",

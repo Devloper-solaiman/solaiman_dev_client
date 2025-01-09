@@ -3,18 +3,16 @@
 "use client";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { FC, useState } from "react";
-import Player from "lottie-react";
-
-import skillImage from "../../../../../assets/me.json";
-import Image from "next/image";
-
+import dynamic from "next/dynamic";
+import animationData from "./me.json";
 import SkillsSkeleton from "../../ui/skeletion/skillSkeleton";
-
 import SkillsCard from "./skillsCard";
-
 import { SkillCategory } from "@/constants/skills.constants";
 import { TSkill } from "@/types";
 import { useGetSkillsByCategory } from "@/hooks/skills.hook";
+
+// Dynamic import to avoid SSR issues
+const Player = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 const SkillCategories: FC = () => {
   const categories = Object.values(SkillCategory);
@@ -61,12 +59,12 @@ const SkillCategories: FC = () => {
         ))}
       </Tabs>
       <div className="absolute right-0 -top-20">
-      <Player
-        autoplay
-        loop
-        animationData={skillImage}
-        style={{ height: "400px", width: "400px" }}
-      />
+        <Player
+          play
+          loop
+          animationData={animationData}
+          style={{ width: 400, height: 400 }}
+        />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export const Title: React.FC<TitleProps> = ({ title1 }) => {
         <h2>{title1}</h2>
         <motion.div
           animate={{ opacity: 1 }}
-          className="absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r from-warning to-transparent"
+          className="absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r from-warning-200 to-transparent"
           initial={{ opacity: 0.5 }}
           transition={{
             duration: 1.5,
