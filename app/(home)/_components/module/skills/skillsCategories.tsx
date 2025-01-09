@@ -3,10 +3,9 @@
 "use client";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { FC, useState } from "react";
-// import Lottie from "lottie-react";
-// import Lottie from 'react-lottie';
+import Player from "lottie-react";
 
-// import skillImage from "../../../../../assets/me.json";
+import skillImage from "../../../../../assets/me.json";
 import Image from "next/image";
 
 import SkillsSkeleton from "../../ui/skeletion/skillSkeleton";
@@ -62,15 +61,12 @@ const SkillCategories: FC = () => {
         ))}
       </Tabs>
       <div className="absolute right-0 -top-20">
-        <Image
-          alt="gmail"
-          className="size-5"
-          height={20}
-          src={
-            "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-          }
-          width={20}
-        />
+      <Player
+        autoplay
+        loop
+        animationData={skillImage}
+        style={{ height: "400px", width: "400px" }}
+      />
       </div>
     </div>
   );

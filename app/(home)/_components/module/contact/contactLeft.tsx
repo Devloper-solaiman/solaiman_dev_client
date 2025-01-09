@@ -46,7 +46,7 @@ const ContactLeft: React.FC = () => {
           onClick={() => handleCopy("+8801789094002", "whatsapp")}
         >
           {copied.whatsapp ? (
-            <FaCheck  className="text-green-500" size={20} />
+            <FaCheck className="text-green-500" size={20} />
           ) : (
             <FaCopy size={20} />
           )}
