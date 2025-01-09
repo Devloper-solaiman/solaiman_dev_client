@@ -4,7 +4,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { Copy, Check } from "lucide-react";
+import { FaCopy, FaCheck } from "react-icons/fa6";
 import Link from "next/link";
 // import Lottie from "lottie-react";
 
@@ -46,9 +46,9 @@ const ContactLeft: React.FC = () => {
           onClick={() => handleCopy("+8801789094002", "whatsapp")}
         >
           {copied.whatsapp ? (
-            <Check className="text-green-500" size={20} />
+            <FaCheck  className="text-green-500" size={20} />
           ) : (
-            <Copy size={20} />
+            <FaCopy size={20} />
           )}
         </button>
       </div>
@@ -70,9 +70,9 @@ const ContactLeft: React.FC = () => {
           onClick={() => handleCopy(" nsbd500@gmail.com", "email")}
         >
           {copied.email ? (
-            <Check className="text-blue-500" size={20} />
+            <FaCheck className="text-blue-500" size={20} />
           ) : (
-            <Copy size={20} />
+            <FaCopy size={20} />
           )}
         </button>
       </div>
