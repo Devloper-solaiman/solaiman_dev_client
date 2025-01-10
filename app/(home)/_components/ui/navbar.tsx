@@ -103,8 +103,8 @@ const CustomNavbar = () => {
             IconComponent={FaDashcube}
             bgColor="bg-transparent"
             borderColor="dark:text-white border-warning-500"
-            href="/dashboard"
-            target="_self"
+            href="https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link"
+            target="_blank"
             text="Dashboard"
           />
         </NavbarItem>
@@ -154,7 +154,10 @@ const CustomNavbar = () => {
         </div>
         <NavButtons />
         <NavbarItem className="hidden sm:flex gap-2">
-          <AnimatedButton href="/dashboard" text="Dashboard" />
+          <AnimatedButton
+            href="https://drive.google.com/file/d/1Ya5rkU5Do6VWPhvNI7zWk1g8OA-nPh56/view?usp=drive_link"
+            target="_blank" text="Dashboard"
+          />
         </NavbarItem>
       </NavbarMenu>
     </Navbar>
