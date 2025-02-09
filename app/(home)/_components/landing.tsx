@@ -69,11 +69,11 @@ const Landing = () => {
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-default-800">
                 Hello, I&apos;m{" "}
-                <span className="text-[#b1791f]">MD Solaiman</span>
+                <span className="text-[#b1791f]">MD <span className="font-GreatVibes">S</span>olaiman</span>
               </h1>
 
               <h2 className="text-xl md:text-3xl text-default-700 mt-4">
-                A Frontend Developer.
+                A Frontend <span className="font-GreatVibes">D</span>eveloper.
                 
               </h2>
               <p className="text-default-700 mt-6 leading-relaxed">

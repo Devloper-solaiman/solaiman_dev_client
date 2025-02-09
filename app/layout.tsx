@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import clsx from "clsx";
+import localFont from "next/font/local"
 
 import { Providers } from "../providers/providers";
 
@@ -8,7 +9,7 @@ import Container from "./(home)/_components/ui/container";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
-
+const GreatVibes = localFont({src:"../font/GreatVibes-Regular.ttf", variable:"--GreatVibes-Regular"})
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -57,7 +58,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans md:comic-neue antialiased",
-          fontSans.variable,
+          fontSans.variable, GreatVibes.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>

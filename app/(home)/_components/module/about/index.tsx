@@ -22,6 +22,7 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
     <section className="bg-default-50 p-2 md:p-8 flex flex-col lg:flex-row justify-start items-start lg:space-x-8 space-y-8 lg:space-y-0">
       {/* Image Section */}
       <div className="w-full lg:w-1/3">
+      dk
         <Image
           alt={about.me.name}
           className="w-full h-full lg:h-[350px] rounded-lg shadow-lg object-cover"

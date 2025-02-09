@@ -7,7 +7,7 @@ import SkillCategories from "../_components/module/skills/skillsCategories";
 const SkillsPage = () => {
   return (
     <div>
-      <Title title1="Skills" title2="Skills" />
+      <div><Title title1="Skills" title2="Skills" /></div>
       <SkillCategories />
     </div>
   );
