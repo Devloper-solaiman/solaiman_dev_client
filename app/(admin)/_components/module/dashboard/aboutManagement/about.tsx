@@ -34,8 +34,8 @@ export default function About({ about }: TProfileProps) {
   };
 
   const adminData = {
-    name: about[0].me.name,
-    image: about[0].me.image,
+    name: about[0].me?.name,
+    image: about[0].me?.image,
   };
 
   const [editableData, setEditableData] = useState(profileData);
@@ -129,7 +129,7 @@ export default function About({ about }: TProfileProps) {
             ) : (
               <>
                 <Image
-                  alt={editableAdminData.name}
+                  alt="Image Upload"
                   className="w-24 h-24 rounded-full border-2 object-cover border-default-300"
                   height={500}
                   src={editableAdminData.image}

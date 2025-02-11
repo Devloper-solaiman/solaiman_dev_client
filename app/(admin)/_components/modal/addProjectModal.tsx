@@ -240,7 +240,7 @@ export default function AddProjectModal() {
                       uploadedImages.map((img, index) => (
                         <div key={index} className="relative">
                           <Image
-                            alt={`Uploaded image ${index + 1}`}
+                            alt="upload image"
                             className="h-14 w-14 mt-2 object-cover rounded-md border border-dashed border-default-200 p-1"
                             height={100}
                             src={img}

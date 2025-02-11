@@ -23,7 +23,7 @@ export default function SkillsCard({ skill }: TSkillCardProps) {
       {/* Skill Icon */}
       <div className="bg-warningColor rounded-full ">
         <Image
-          alt={skill.name}
+          alt="skill Name"
           className="size-6 md:size-10 object-contain"
           height={500}
           src={skill.icon}

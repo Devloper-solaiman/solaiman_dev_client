@@ -17,7 +17,7 @@ const ImageBox: React.FC<BoxProps> = ({ imageUrl, name, title, link }) => {
   return (
     <div className={styles.box}>
       <div className={styles.content}>
-        <Image fill alt={name} className={styles.img} src={imageUrl} />
+        <Image fill alt="Name" className={styles.img} src={imageUrl} />
         <h2>
           {name}
           <br />

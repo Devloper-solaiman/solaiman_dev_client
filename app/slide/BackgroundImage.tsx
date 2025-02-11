@@ -8,7 +8,6 @@ type Props = {
 function BackgroundImage({ transitionData, currentSlideData }: Props) {
     return (
         <>
-        <h1>dfk</h1>
             {
                 transitionData && (
                     <motion.img

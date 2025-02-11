@@ -35,7 +35,7 @@ const ClientExperience: React.FC<TExperiencesProps> = ({ experiences }) => {
                 className="flex items-center gap-2 border border-default-200 rounded px-3 py-1"
               >
                 <Image
-                  alt={tech.name}
+                  alt="Tach Image"
                   className="rounded-full size-6 bg-cover object-cover"
                   height={500}
                   src={tech.icon}

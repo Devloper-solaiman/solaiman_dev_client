@@ -31,7 +31,7 @@ export default function BlogCard({ blogs }: TBlogTableProps) {
           >
             <CardHeader className="flex justify-between items-center">
               <Image
-                alt={blog.imageUrl}
+                alt="Blog Image"
                 className="w-full h-[250px] object-cover rounded-md"
                 height={500}
                 src={blog.imageUrl}

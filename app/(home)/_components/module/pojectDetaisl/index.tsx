@@ -60,7 +60,7 @@ export default function ProjectDetails({ project }: { project: TProject }) {
       >
         <motion.div className="w-full h-[400px]">
           <Image
-            alt={title}
+            alt="Title"
             className="rounded-lg shadow-lg"
             height={500}
             src={images[currentImageIndex]}

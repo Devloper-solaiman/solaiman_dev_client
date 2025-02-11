@@ -169,7 +169,7 @@ export default function AddExperienceModal() {
                   >
                     {technologies?.map((technology: TSkill) => (
                       <SelectItem key={technology._id} value={technology._id}>
-                        {technology.name}
+                        {technology?.name}
                       </SelectItem>
                     ))}
                   </Select>

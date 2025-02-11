@@ -33,7 +33,7 @@ const ThumbnailSlider: React.FC<TThumbnailSliderProps> = ({
       {images.map((image: string, index: number) => (
         <SwiperSlide key={index}>
           <Image
-            alt={`Thumbnail ${index + 1}`}
+            alt="Thumbnail"
             className={`w-24 h-16 m-2 object-cover rounded-lg cursor-pointer transition-transform duration-200 ease-in-out hover:scale-105 ${
               currentImageIndex === index ? "border-2 border-warning" : ""
             }`}

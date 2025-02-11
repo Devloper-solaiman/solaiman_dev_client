@@ -24,7 +24,7 @@ export default function About({ about, projects, skills, blogs }: TAboutProps) {
       <div className="w-full lg:w-1/3">
       dk
         <Image
-          alt={about.me.name}
+          alt="about Image"
           className="w-full h-full lg:h-[350px] rounded-lg shadow-lg object-cover"
           height={500}
           src={about.image || "https://example.com/my-image.jpg"}

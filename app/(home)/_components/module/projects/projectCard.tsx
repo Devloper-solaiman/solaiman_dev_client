@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: { project: TProject }) {
       <div className="mb-10 relative overflow-hidden rounded">
         <Link href={`/project/${project._id}`}>
           <Image
-            alt={project?.title}
+            alt="project Title"
             className="w-full md:h-[200px] object-cover rounded transition-transform duration-300"
             height={1000}
             src={project?.images[0]}

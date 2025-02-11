@@ -55,9 +55,9 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }}
     >
       <div className="flex gap-3 items-center">
-        <Avatar size="md" src={blog.author.image} />
+        <Avatar size="md" src={blog.author?.image} />
         <div className="flex flex-col items-start">
-          <h3 className="text-2xl font-bold">{blog.author.name}</h3>
+          <h3 className="text-2xl font-bold">{blog.author?.name}</h3>
           <p className="text-sm text-default-500">
             Posted on: {new Date(blog.createdAt).toLocaleDateString()}
           </p>
