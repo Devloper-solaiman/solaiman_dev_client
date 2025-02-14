@@ -100,12 +100,13 @@ export default function AddBlogModal() {
                       Content
                     </label>
                     <div className="rounded border border-default-200 text-default-700">
-                      <ReactQuill
+                      <textarea
                         id="content"
-                        theme="snow"
                         value={watch("content")}
-                        onChange={(value) => setValue("content", value)}
-                      />
+                        onChange={(e) => setValue("content", e.target.value)}
+                        className="w-full h-40 p-2 border border-gray-300 rounded-md"
+                        placeholder="Write your content here..."
+                      ></textarea>
                     </div>
                   </div>
                   {errors.content && (
