@@ -17,7 +17,7 @@ export const siteConfig = {
   navItems: [
     {
       label: "Home",
-      href: "#home",
+      href: "home",
     },
     {
       label: "Skills",

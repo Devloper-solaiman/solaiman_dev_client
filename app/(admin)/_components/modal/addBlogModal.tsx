@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 "use client";
 
 import React, { useState } from "react";
@@ -21,6 +20,7 @@ import dynamic from "next/dynamic";
 import { useCreateBlog } from "@/hooks/blogs.hook";
 import { uploadImageToCloudinary } from "@/utils/uploadImageToCloudinary";
 import "react-quill/dist/quill.snow.css";
+import { Editor } from "@tinymce/tinymce-react";
 
 // Dynamically import the ReactQuill component to avoid SSR issues
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -32,6 +32,7 @@ export default function AddBlogModal() {
   const { mutate: addBlogFn, isPending } = useCreateBlog();
 
   const {
+    register,
     handleSubmit,
     setValue,
     watch,
@@ -61,6 +62,7 @@ export default function AddBlogModal() {
 
       return;
     }
+    console.log(data);
     addBlogFn(data);
   };
 
@@ -94,19 +96,23 @@ export default function AddBlogModal() {
                 <form className="space-y-3" onSubmit={handleSubmit(onSubmit)}>
                   <div className="space-y-2">
                     <label
-                      className="block text-sm font-medium"
                       htmlFor="content"
+                      className="block text-sm font-medium"
                     >
                       Content
                     </label>
                     <div className="rounded border border-default-200 text-default-700">
-                      <textarea
-                        id="content"
+                    <Editor
+                        apiKey="mzoeiyrs1s3ockhka70u1c893hjvk8nq285cmi8cawbhhilf"  // Optional, you can set your API key
                         value={watch("content")}
-                        onChange={(e) => setValue("content", e.target.value)}
-                        className="w-full h-40 p-2 border border-gray-300 rounded-md"
-                        placeholder="Write your content here..."
-                      ></textarea>
+                        init={{
+                          height: 200,
+                          menubar: false,
+                          plugins: ['link', 'image', 'lists', 'preview', 'wordcount'],
+                          toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | bullist numlist | link image',
+                        }}
+                        onEditorChange={(newValue) => setValue("content", newValue)}
+                      />
                     </div>
                   </div>
                   {errors.content && (
@@ -116,15 +122,15 @@ export default function AddBlogModal() {
                   )}
 
                   <label
-                    className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
                     htmlFor="image"
+                    className="mt-4 cursor-pointer text-xs text-warning-400 my-5 flex gap-2 items-center h-14 rounded-xl px-3 border border-default-200 hover:border-default-400"
                   >
                     <FaImage className="text-2xl" />
                     <p>Upload Image</p>
                     <Input
+                      id="image"
                       accept="image/*"
                       className="hidden"
-                      id="image"
                       type="file"
                       variant="bordered"
                       onChange={handleFileUpload}
