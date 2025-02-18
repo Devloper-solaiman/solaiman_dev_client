@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 "use client";
 
 import {
@@ -17,6 +16,7 @@ import DeleteEducationModal from "../../../modal/deleteEducationModal";
 import EditEducationModal from "../../../modal/editEducationModal ";
 
 import { TEducation } from "@/types";
+import { Avatar } from "@nextui-org/avatar";
 
 interface TEducationTableProps {
   educations: TEducation[];
@@ -48,7 +48,7 @@ export default function EducationTable({ educations }: TEducationTableProps) {
           {educations?.map((education: TEducation) => (
             <TableRow key={education._id}>
               <TableCell>
-                <p className="whitespace-nowrap">{education.institution}</p>
+              <Avatar src={education.institution} />
               </TableCell>
               <TableCell>
                 <p className="whitespace-nowrap">{education.location}</p>

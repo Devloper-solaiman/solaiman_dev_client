@@ -13,7 +13,7 @@ export const Title: React.FC<TitleProps> = ({ title1 }) => {
       <section className="my-5 md:my-10 w-1/6">
       <div className="flex items-center justify-center shadow-2xl dark:text-gray-200 rounded-sm shadow-[#140D03] gap-2 text-lg md:text-2xl text-default-900 font-semibold relative">
          <h2>{title1}</h2>
-        {/* <motion.div
+        <motion.div
           animate={{ opacity: 1 }}
           className="absolute -bottom-2 left-0 h-1 w-full bg-gradient-to-r from-gray-400 to-transparent"
           initial={{ opacity: 0.5 }}
@@ -22,7 +22,7 @@ export const Title: React.FC<TitleProps> = ({ title1 }) => {
             repeat: Infinity,
             repeatType: "reverse",
           }}
-        /> */}
+        />
       </div>
     </section>
     </div>

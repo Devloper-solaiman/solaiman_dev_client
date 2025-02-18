@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 import {
   Modal,
@@ -52,6 +51,7 @@ export default function AddEducationModal() {
         .map((subject: string) => subject.trim()), // Split subjects by comma
     };
 
+    console.log(addData);
     addEducationFn(addData);
     onOpenChange(); // Close the modal after submission
   };

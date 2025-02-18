@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React from "react";
 import {
   Modal,
@@ -26,6 +25,8 @@ export default function DeleteEducationModal({
 
   const deleteEducationHandler = async (id: string) => {
     if (!id) {
+      console.error("Id is required but not provided.");
+
       return;
     }
 

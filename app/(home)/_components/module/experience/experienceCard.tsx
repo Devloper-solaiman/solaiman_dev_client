@@ -21,13 +21,8 @@ const ClientExperience: React.FC<TExperiencesProps> = ({ experiences }) => {
           <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
           <p className="text-default-600 font-medium">{exp.company}</p>
           <p className="text-sm text-default-500 mb-4">{exp.location}</p>
-          <p className="text-sm text-default-500 mb-4">
-            {format(new Date(exp.startDate), "dd MMM yyyy")} -{" "}
-            {exp.endDate
-              ? format(new Date(exp.endDate), "dd MMM yyyy")
-              : "Present"}
-          </p>
-          <p className="text-default-700 mb-4 text-start">{exp.description}</p>
+       
+          <p className="text-default-700 mb-4 text-justify">{exp.description}</p>
           <div className="flex flex-wrap items-start gap-3">
             {exp.technologies.map((tech) => (
               <div
@@ -41,7 +36,7 @@ const ClientExperience: React.FC<TExperiencesProps> = ({ experiences }) => {
                   src={tech.icon}
                   width={500}
                 />
-                <span className="text-sm font-medium">{tech.name}</span>
+               
               </div>
             ))}
           </div>

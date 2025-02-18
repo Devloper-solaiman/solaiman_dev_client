@@ -7,5 +7,6 @@ export interface TEducation {
   endDate: string;
   description: string;
   grade: string;
+  images: string[];
   subjects: string[];
 }

@@ -22,13 +22,9 @@ const EducationTableSkeleton = () => {
       </div>
       <Table aria-label="Loading Education Table">
         <TableHeader>
-          <TableColumn>Institution</TableColumn>
-          <TableColumn>Location</TableColumn>
-          <TableColumn>Start Date</TableColumn>
-          <TableColumn>End Date</TableColumn>
-          <TableColumn>Grade</TableColumn>
-          <TableColumn>Subjects</TableColumn>
-          <TableColumn>Degree</TableColumn>
+          <TableColumn>title</TableColumn>
+          <TableColumn>description</TableColumn>
+          <TableColumn>image</TableColumn>
           <TableColumn>Actions</TableColumn>
         </TableHeader>
         <TableBody>
@@ -45,19 +41,7 @@ const EducationTableSkeleton = () => {
               </TableCell>
               <TableCell>
                 <Skeleton className="h-4 w-full rounded-md" />
-              </TableCell>
-              <TableCell>
-                <Skeleton className="h-4 w-full rounded-md" />
-              </TableCell>
-              <TableCell>
-                <Skeleton className="h-4 w-full rounded-md" />
-              </TableCell>
-              <TableCell>
-                <Skeleton className="h-4 w-full rounded-md" />
-              </TableCell>
-              <TableCell>
-                <Skeleton className="h-4 w-full rounded-md" />
-              </TableCell>
+              </TableCell>      
             </TableRow>
           ))}
         </TableBody>

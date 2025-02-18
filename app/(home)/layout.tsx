@@ -3,7 +3,6 @@
 
 import { ReactNode } from "react";
 import { Element } from "react-scroll";
-
 import CustomNavbar from "./_components/ui/navbar";
 import Footer from "./_components/footer";
 import SmoothScrollWrapper from "./_components/ui/ScrollAnimation";
@@ -11,23 +10,25 @@ import SmoothScrollWrapper from "./_components/ui/ScrollAnimation";
 interface CommonLayoutProps {
   children: ReactNode;
   aboutMe: ReactNode;
-  // education: ReactNode;
+  education: ReactNode;
   experience: ReactNode;
   skills: ReactNode;
   projects: ReactNode;
   myBlogs: ReactNode;
   contactMe: ReactNode;
+  service:ReactNode;
 }
 
 export default function CommonLayout({
   children,
   aboutMe,
-  // education,
+  education,
   experience,
   skills,
   projects,
   myBlogs,
   contactMe,
+  service,
 }: CommonLayoutProps) {
   return (
     <div className="space-y-5 pt-4 px-2">
@@ -51,9 +52,13 @@ export default function CommonLayout({
       <Element name="projects">
         <div>{projects}</div>
       </Element>
+      <Element name="education">
+        <div>{education}</div>
+      </Element>
       <Element name="blogs">
         <div>{myBlogs}</div>
       </Element>
+     
       <Element name="contact">
         <div>{contactMe}</div>
       </Element>
