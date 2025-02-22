@@ -73,7 +73,7 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       <div className="mt-5">
         <Link
           className="mt-4 font-semibold text-warning border-b border-warning hover:text-warning-600"
-          href={`/blogs/${blog?._id}`}
+          href={`/blogs`}
         >
           Read more
         </Link>
