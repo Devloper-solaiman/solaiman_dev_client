@@ -11,7 +11,7 @@ import SmoothScrollWrapper from "./_components/ui/ScrollAnimation";
 interface CommonLayoutProps {
   children: ReactNode;
   aboutMe: ReactNode;
-  // education: ReactNode;
+  education: ReactNode;
   experience: ReactNode;
   skills: ReactNode;
   projects: ReactNode;
@@ -22,7 +22,7 @@ interface CommonLayoutProps {
 export default function CommonLayout({
   children,
   aboutMe,
-  // education,
+  education,
   experience,
   skills,
   projects,
@@ -53,6 +53,9 @@ export default function CommonLayout({
       </Element>
       <Element name="blogs">
         <div>{myBlogs}</div>
+      </Element>
+      <Element name="education">
+        <div>{education}</div>
       </Element>
       <Element name="contact">
         <div>{contactMe}</div>
