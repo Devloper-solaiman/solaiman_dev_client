@@ -1,23 +1,31 @@
+"use client";
 import { getSingleBlog } from '@/service/blogService/blogService';
 import { TBlog } from '@/types';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-export default async function BlogDetailsPage({ params }: { params: { blogId: string } }) {
-    try {
-        const data = await getSingleBlog(params?.blogId);
-        const blog = data?.data as TBlog;
+export default function BlogDetailsPage({ params }: { params: { blogId: string } }) {
+    const [blog, setBlog] = useState<TBlog | null>(null);
+    const [loading, setLoading] = useState(true);
 
-        if (!blog) {
-            return <h1>ব্লগ পাওয়া যায়নি</h1>;
+    useEffect(() => {
+        async function fetchBlog() {
+            try {
+                const data = await getSingleBlog(params.blogId);
+                setBlog(data?.data as TBlog);
+            } catch (error) {
+                console.error("ব্লগ লোড করতে সমস্যা হয়েছে:", error);
+            } finally {
+                setLoading(false);
+            }
         }
+        fetchBlog();
+    }, [params.blogId]);
 
-        return (
-            <div>
-                <h1>Blog page {blog._id}</h1>
-            </div>
-        );
-    } catch (error) {
-        console.error("ব্লগ ফেচ করতে সমস্যা হয়েছে:", error);
-        return <h1>কিছু সমস্যা হয়েছে</h1>;
-    }
+    if (loading) return <h1>লোড হচ্ছে...</h1>;
+
+    return (
+        <div>
+            <h1>Blog page {blog?._id}</h1>
+        </div>
+    );
 }
